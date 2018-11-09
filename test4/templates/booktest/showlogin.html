@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if islogin %}
+{{name}}
+<a href="/login_out/">退出</a>
+{% else %}
+<a href="/login/">{{name}}</a>
+{%endif %}
+
+
+
+
+</body>
+</html>

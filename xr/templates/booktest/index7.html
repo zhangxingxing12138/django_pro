@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+{#    <script src="http://code.jquery.com/jquery-latest.js"></script>#}
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#change').css('cursor', 'pointer').click(function () {
+                $('#yzm').attr('src', $('#yzm').attr('src') + 1)
+            });
+        });
+        {#alert('haha')#}
+    </script>
+</head>
+<body>
+<form action="/check_code/" method="post">
+    <input type="text" name="code">
+    <img id=yzm src="/verify_code/?1">
+    <span id="change">看不清换一个</span>
+    <br>
+    <input type="submit" value="提交">
+    {% csrf_token %}
+</form>
+</body>
+</html>

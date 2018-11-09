@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>分页</title>
+</head>
+<body>
+显示当前页的地区信息：<br>
+<ul>
+{%for hero in list%}
+<li>{{hero.hname}}</li>
+{%endfor%}
+</ul>
+<hr>
+{%for pindex in plist%}
+    {%if pIndex == pindex%}
+        {{pindex}}
+    {%else%}
+        <a href="/page/">{{pindex}}</a>
+    {%endif%}
+{%endfor%}
+</body>
+</html>

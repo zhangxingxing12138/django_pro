@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转义</title>
+</head>
+<body>
+{{ ctx }}
+{#取消转义#}
+{{ ctx|safe }}
+
+{#段落取消转义#}
+{% autoescape off %}
+    {{ ctx }}
+{% endautoescape %}
+{#硬编码 默认非转义#}
+{{ date|default:"&lt;h1&gt;老王&lt;/h1&gt;" }}
+<br>
+{{ date|default:"&amp;lt;h1&amp;gt;老王&lt;/h1&gt;" }}
+</body>
+</html>

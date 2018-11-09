@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+普通链接：<a href="/fan2/">fan2</a><br>
+反向解析链接：<a href="{% url 'booktest:fan2' %}">fan2</a>
+<br>
+反向参数：<a href="{% url 'booktest:fan2' 2 3%}">fan2</a>
+<br>
+反向关键词参数：<a href="{% url 'booktest:fan2' id=100 age=18%}">fan2</a>
+</body>
+</html>

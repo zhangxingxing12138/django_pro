@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for book in list %}
+        {% if book.id == 16 %}
+            <li style="background-color: red">{{ book.btitle }}====={{ forloop.counter }}</li>
+        {% else %}
+            <li>{{ book.btitle }}</li>
+        {% endif %}
+    {% empty %}
+        <h1>这是空的</h1>
+    {% endfor %}
+</ul>
+</body>
+</html>

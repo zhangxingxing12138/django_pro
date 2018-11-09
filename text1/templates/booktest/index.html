@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书列表</title>
+    <style>
+        ul{
+            list-style:none;
+
+        }
+        .title{
+            font-size:20px;
+            color:blue;
+            line-height:40px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h1>图书列表</h1>
+<ul>
+    {% for book in list %}
+        <li class="title">
+            <a href="/{{book.id}}/">{{ book.btitle }}</a>
+        </li>
+{#        {% for hero in book.heroinfo_set.all %}#}
+{#            <h1>{{ hero.hname }}</h1>#}
+{#        {% endfor %}#}
+
+
+
+    {% endfor %}
+
+</ul>
+
+</body>
+</html>

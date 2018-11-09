@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% load cache %}
+{% cache 500 hello %}
+hello1
+<!--hello2-->
+{% endcache %}
+</body>
+</html>

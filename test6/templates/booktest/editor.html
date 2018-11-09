@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src='/static/js/tiny_mce.js'></script>
+    <script type="text/javascript">
+        tinyMCE.init({
+            'mode': 'textareas',
+            'theme': 'advanced',
+            'width': 400,
+            'height': 100
+        });
+    </script>
+</head>
+<body>
+<form method="post" action="/submit_x/">
+    <textarea name='gcontent'>哈哈，这是啥呀</textarea>
+    <input type="submit"value="提交">
+    {% csrf_token %}
+</form>
+</body>
+</html>

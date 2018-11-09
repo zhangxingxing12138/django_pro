@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>guolv</title>
+</head>
+<body>
+默认过滤器：{{ data|default:'这是默认值' }}
+<br>
+长度过滤器:{{ list|length }}
+<br>
+时间过滤器
+<ul>
+    {% for book in  list %}
+        <li>{{ book.btitle }}---{{ book.bpub_date|date:'Y-m-d ' }}</li>
+    {% endfor %}
+
+</ul>
+<ul>
+    {% for book in  list %}
+        {% if forloop.counter|divisibleby:2 %}
+            <li style="background-color: aqua">{{ book.btitle }}---{{ book.bpub_date|date:'Y-m-d ' }}</li>
+        {% else %}
+            <li style="background-color: beige">{{ book.btitle }}---{{ book.bpub_date|date:'Y-m-d ' }}</li>
+        {% endif %}
+    {% endfor %}
+
+</ul>
+
+{#自定义过滤器#}
+<ul>
+{% load filters %}
+    {% for book in  list %}
+        {% if forloop.counter|mod:3%}
+            <li style="background-color: aqua">{{ book.btitle }}---{{ book.bpub_date|date:'Y-m-d ' }}</li>
+        {% else %}
+            <li style="background-color: beige">{{ book.btitle }}---{{ book.bpub_date|date:'Y-m-d ' }}</li>
+        {% endif %}
+    {% endfor %}
+
+</ul>
+</body>
+</html>

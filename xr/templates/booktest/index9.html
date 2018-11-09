@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+    <script>
+        alert('haha')
+    </script>
+
+</head>
+<body>
+<img src="/static/img/timg.jpeg"style="height: 200px;width: 300px;"/>
+<img src="/abc/img/timg.jpeg"style="height: 200px;width: 300px;"/>
+{% load static from staticfiles %}
+<img src="{% static "img/timg.jpeg"%} "style="height: 200px;width: 300px;"/>
+</body>
+</html>
